@@ -19,7 +19,9 @@ const jobs = [
     role: 'Full-Stack Developer',
     desc: 'Designed and developed a full website for a pharmaceutical company as part of a 3-person team — covering planning, UI/UX design, front-end and back-end development.',
     tags: ['Next.js', 'React', 'Sass', 'Figma'],
-    link: 'https://www.labvalar.com',
+    link: 'https://labvalar.vercel.app',
+    screenshot: '/screenshots/valar.png',
+    note: 'Este sitio es una versión de muestra para fines de exhibición. Los formularios de contacto están desactivados.'
   },
 ]
 
@@ -50,12 +52,41 @@ export default function Experience() {
                   )}
                 </div>
                 <p className="exp-role">{job.role}</p>
+                {job.screenshot && (
+                  <a
+                    href={job.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="exp-screenshot-link"
+                  >
+                    <div className="exp-screenshot-wrap">
+                      <div className="exp-screenshot-bar">
+                        <div className="exp-screenshot-dots">
+                          <span className="exp-screenshot-dot" />
+                          <span className="exp-screenshot-dot" />
+                          <span className="exp-screenshot-dot" />
+                        </div>
+                        <span className="exp-screenshot-url">labvalar.vercel.app</span>
+                      </div>
+                      <img
+                        src={job.screenshot}
+                        alt={`${job.company} website`}
+                        className="exp-screenshot"
+                      />
+                    </div>
+                  </a>
+                )}
                 <p className="exp-desc">{job.desc}</p>
                 <div className="tags">
                   {job.tags.map((tag) => (
                     <span className="tag" key={tag}>{tag}</span>
                   ))}
                 </div>
+                {job.note && (
+                  <p className="exp-note">
+                    * {job.note}
+                  </p>
+                )}
               </div>
             </div>
           ))}

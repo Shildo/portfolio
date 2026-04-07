@@ -321,6 +321,58 @@ nav {
   }
 }
 
+/* SCREENSHOT */
+.exp-screenshot-wrap {
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  border: 0.5px solid var(--border);
+  overflow: hidden;
+}
+
+.exp-screenshot-bar {
+  background: var(--surface);
+  padding: 7px 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 0.5px solid var(--border);
+}
+
+.exp-screenshot-dots {
+  display: flex;
+  gap: 5px;
+}
+
+.exp-screenshot-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--border);
+}
+
+.exp-screenshot-url {
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+.exp-screenshot-link {
+  display: block;
+}
+
+.exp-screenshot {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  transition: opacity 0.2s;
+}
+
+.exp-screenshot:hover {
+  opacity: 0.85;
+}
+
 /* EXPERIENCE */
 .exp-list {
   display: flex;
@@ -403,6 +455,17 @@ nav {
   letter-spacing: 0.06em;
   padding: 4px 10px;
   border-radius: 2px;
+}
+
+.exp-note {
+  margin-top: 1.2rem;
+  font-size: 11px;
+  font-style: italic;
+  color: var(--accent);
+  opacity: 0.7;
+  line-height: 1.5;
+  border-left: 1px solid var(--border); /* Opcional: le da un toque de "cita" o "disclaimer" */
+  padding-left: 0.8rem;
 }
 
 @media (max-width: 600px) {

@@ -9,7 +9,7 @@ export default function Navbar() {
     <div className="nav-wrapper">
       <nav>
         <div className="container nav-inner">
-          <span className="nav-name">GM</span>
+          <a href="/" className="nav-name">GM</a>
 
           <ul className="nav-links">
             <li><a href="#about">About</a></li>
