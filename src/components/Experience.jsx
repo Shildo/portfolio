@@ -21,7 +21,7 @@ const jobs = [
     tags: ['Next.js', 'React', 'Sass', 'Figma'],
     link: 'https://labvalar.vercel.app',
     screenshot: '/screenshots/valar.png',
-    note: 'Este sitio es una versión de muestra para fines de exhibición. Los formularios de contacto están desactivados.'
+    note: 'Este sitio es una versión de muestra para fines de exhibición. Los formularios se encuentran desactivados.'
   },
 ]
 
