@@ -19,9 +19,8 @@ const jobs = [
     role: 'Full-Stack Developer',
     desc: 'Designed and developed a full website for a pharmaceutical company as part of a 3-person team — covering planning, UI/UX design, front-end and back-end development.',
     tags: ['Next.js', 'React', 'Sass', 'Figma'],
-    link: 'https://labvalar.vercel.app',
+    link: 'https://labvalar.com',
     screenshot: '/screenshots/valar.png',
-    note: 'Este sitio es una versión de muestra para fines de exhibición. Los formularios se encuentran desactivados.'
   },
 ]
 
@@ -66,7 +65,7 @@ export default function Experience() {
                           <span className="exp-screenshot-dot" />
                           <span className="exp-screenshot-dot" />
                         </div>
-                        <span className="exp-screenshot-url">labvalar.vercel.app</span>
+                        <span className="exp-screenshot-url">labvalar.com</span>
                       </div>
                       <img
                         src={job.screenshot}
@@ -82,11 +81,6 @@ export default function Experience() {
                     <span className="tag" key={tag}>{tag}</span>
                   ))}
                 </div>
-                {job.note && (
-                  <p className="exp-note">
-                    * {job.note}
-                  </p>
-                )}
               </div>
             </div>
           ))}
