@@ -15,7 +15,7 @@ export default function About() {
           </p>
           <div className="about-stats">
             <div className="stat-item">
-              <span className="stat-num">2+</span>
+              <span className="stat-num">3+</span>
               <p className="stat-desc">Years of professional experience</p>
             </div>
             <div className="stat-item">

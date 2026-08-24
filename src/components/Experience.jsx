@@ -22,7 +22,24 @@ const jobs = [
     link: 'https://labvalar.com',
     screenshot: '/screenshots/valar.png',
   },
+  {
+    period: ['Game Jam', '1 week'],
+    company: 'Mata The Burial',
+    role: 'Game Programmer (Team of 3)',
+    desc: "Built as part of a 3-programmer team for the FDA's 2nd Game Jam, hosted by \"Cronopios\" (the arts faculty student center at UNLP), with the theme \"Argentina, ¡qué país!\" — a one-week jam.",
+    tags: ['Godot', 'C#', 'Canva'],
+    link: 'https://gaspar-varetta.itch.io/mata-the-burial',
+    screenshot: '/screenshots/image.png',
+  },
 ]
+
+function screenshotLabel(url) {
+  try {
+    return new URL(url).hostname
+  } catch {
+    return url
+  }
+}
 
 export default function Experience() {
   return (
@@ -46,7 +63,6 @@ export default function Experience() {
                       rel="noopener noreferrer"
                       className="exp-link"
                     >
-                      ↗
                     </a>
                   )}
                 </div>
@@ -65,7 +81,9 @@ export default function Experience() {
                           <span className="exp-screenshot-dot" />
                           <span className="exp-screenshot-dot" />
                         </div>
-                        <span className="exp-screenshot-url">labvalar.com</span>
+                        <span className="exp-screenshot-url">
+                          {screenshotLabel(job.link)}
+                        </span>
                       </div>
                       <img
                         src={job.screenshot}
